@@ -1,33 +1,24 @@
-import { useState, useEffect } from 'react'
 import './App.css'
 import Menu1781432412017 from './components/Menu1781432412017'
-import CadastroDisciplina1781432412017 from './components/Cadastros/CadastroDisciplina1781432412017'
-import CadastroProfessor1781432412017 from './components/Cadastros/CadastroProfessor1781432412017'
-import CadastroCurso1781432412017 from './components/Cadastros/CadastroCurso1781432412017'
 import Container1781432412017 from './components/Container1781432412017'
+import PageRender1781432412017 from './components/PageRender1781432412017';
+import { useState } from 'react';
 
 function App() {
   
-  const pagesCadastro = new Map([
-    ["professor", CadastroProfessor1781432412017],
-    ["disciplina", CadastroDisciplina1781432412017],
-    ["curso", CadastroCurso1781432412017],
-  ]);
+  const [current, setCurrent] = useState("professor");
 
-  let current = CadastroProfessor1781432412017;
-
-  const showPage = (pageName) => {
-    current = pagesCadastro.get(pageName);
-    this.setState();
+  const changePage = (name) => {
+    setCurrent(name);
   }
 
   return (
     <Container1781432412017>
       <Container1781432412017>
-        <Menu1781432412017 pageHandler={showPage} />
+        <Menu1781432412017 pageHandler={changePage} />
       </Container1781432412017>
       <Container1781432412017>
-        { current() }
+        <PageRender1781432412017 page={current} />
       </Container1781432412017>
     </Container1781432412017>
   )
