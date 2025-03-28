@@ -2,7 +2,7 @@ import "./Menu.css";
 
 function Menu1781432412017({ pageHandler }) {
   return (
-    <div className="container">
+    <div className="menu-container">
       <h1>SIGA</h1>
       <h4>Cadastrar:</h4>
       <div
