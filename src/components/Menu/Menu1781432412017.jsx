@@ -1,5 +1,4 @@
 import "./Menu.css";
-import { useState } from "react";
 
 function Menu1781432412017({ pageHandler }) {
   return (
@@ -9,7 +8,7 @@ function Menu1781432412017({ pageHandler }) {
       <div
         className="page"
         onClick={() => {
-          pageHandler("professor");
+          pageHandler("professor", true);
         }}
       >
         <p>Professor</p>
@@ -17,7 +16,7 @@ function Menu1781432412017({ pageHandler }) {
       <div
         className="page"
         onClick={() => {
-          pageHandler("disciplina");
+          pageHandler("disciplina", true);
         }}
       >
         <p>Disciplina</p>
@@ -25,7 +24,32 @@ function Menu1781432412017({ pageHandler }) {
       <div
         className="page"
         onClick={() => {
-          pageHandler("curso");
+          pageHandler("curso", true);
+        }}
+      >
+        <p>Curso</p>
+      </div>
+      <h4>Visualizar:</h4>
+      <div
+        className="page"
+        onClick={() => {
+          pageHandler("professor", false);
+        }}
+      >
+        <p>Professor</p>
+      </div>
+      <div
+        className="page"
+        onClick={() => {
+          pageHandler("disciplina", false);
+        }}
+      >
+        <p>Disciplina</p>
+      </div>
+      <div
+        className="page"
+        onClick={() => {
+          pageHandler("curso", false);
         }}
       >
         <p>Curso</p>

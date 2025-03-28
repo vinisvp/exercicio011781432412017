@@ -6,10 +6,10 @@ import { useState } from 'react';
 
 function App() {
   
-  const [current, setCurrent] = useState("professor");
+  const [current, setCurrent] = useState(["professor", true]);
 
-  const changePage = (name) => {
-    setCurrent(name);
+  const changePage = (name, cadastrar) => {
+    setCurrent([name, cadastrar]);
   }
 
   return (
@@ -18,7 +18,7 @@ function App() {
         <Menu1781432412017 pageHandler={changePage} />
       </Container1781432412017>
       <Container1781432412017>
-        <PageRender1781432412017 page={current} />
+        <PageRender1781432412017 page={current[0]} cadastrar={current[1]} />
       </Container1781432412017>
     </Container1781432412017>
   )
