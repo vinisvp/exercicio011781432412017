@@ -20,8 +20,8 @@ function CadastroProfessor1781432412017() {
         <label>E-mail</label><br/>
         <input type='email'/>
       </div>
-      <button>Inserir</button>
-      <button>cancelar</button>
+      <button className='cadastro-button postive'>Inserir</button><br/>
+      <button className='cadastro-button neutral'>Cancelar</button>
     </form>
   )
 }

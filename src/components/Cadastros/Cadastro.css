@@ -1,5 +1,6 @@
 .cadastro-container {
   font-family: Arial, Helvetica, sans-serif;
+  display: block;
   justify-items: center;
   justify-self: center;
   text-align: center;
@@ -9,6 +10,8 @@
   width: 30%;
   margin-top: 30px;
 }
+
+/* Input */
 
 .input-field{
   display: block;
@@ -22,8 +25,39 @@
   border-radius: 10%;
 }
 
-.input-field input{
-  padding: 5px;
-  border: 2px solid #4d4d4d;
-  border-radius: 10%;
+  .input-field input:focus{
+    padding: 5px;
+    border: 2px solid #272727;
+    border-radius: 10%;
+  }
+
+/* Button */
+
+.cadastro-button{
+  border: 0;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15%;
 }
+
+  .cadastro-button.postive{
+    background-color: rgb(78, 140, 255);
+    color: white;
+  }
+
+    .cadastro-button.postive:hover{
+      background-color: rgb(137, 178, 255);
+      color: white;
+      cursor: pointer;
+    }
+
+  .cadastro-button.neutral{
+    background-color: rgb(165, 165, 165);
+  }
+
+    .cadastro-button.neutral:hover{
+      background-color: rgb(185, 185, 185);
+      cursor: pointer;
+    }
+
+
