@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function VisualizarProfessor1781432412017() {
+function VisualizarProfessor1781432412017(setPage) {
 
   return (
     <>

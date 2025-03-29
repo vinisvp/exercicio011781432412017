@@ -6,7 +6,7 @@ import VisualizarDisciplina1781432412017 from "./Visualizadores/VisualizarDiscip
 import VisualizarProfessor1781432412017 from "./Visualizadores/VisualizarProfessor1781432412017";
 import VisualizarCurso1781432412017 from "./Visualizadores/VisualizarCurso1781432412017";
 
-function PageRender1781432412017({page, cadastrar}) {
+function PageRender1781432412017({page, cadastrar, saveHandler, pageHandler}) {
   const pagesCadastro = new Map([
     ["professor", CadastroProfessor1781432412017],
     ["disciplina", CadastroDisciplina1781432412017],
@@ -21,7 +21,7 @@ function PageRender1781432412017({page, cadastrar}) {
 
   const showPage = () => {
     let current;
-    cadastrar ? current = pagesCadastro.get(page)() : current = pagesVisualizar.get(page)();
+    cadastrar ? current = pagesCadastro.get(page)(saveHandler, pageHandler) : current = pagesVisualizar.get(page)(pageHandler);
     return current;
   };
 
