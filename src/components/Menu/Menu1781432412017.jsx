@@ -16,18 +16,18 @@ function Menu1781432412017({ pageHandler }) {
       <div
         className="page"
         onClick={() => {
-          pageHandler("disciplina", true);
-        }}
-      >
-        <p>Disciplina</p>
-      </div>
-      <div
-        className="page"
-        onClick={() => {
           pageHandler("curso", true);
         }}
       >
         <p>Curso</p>
+      </div>
+      <div
+        className="page"
+        onClick={() => {
+          pageHandler("disciplina", true);
+        }}
+      >
+        <p>Disciplina</p>
       </div>
       <h4>Visualizar:</h4>
       <div
@@ -41,18 +41,18 @@ function Menu1781432412017({ pageHandler }) {
       <div
         className="page"
         onClick={() => {
-          pageHandler("disciplina", false);
-        }}
-      >
-        <p>Disciplina</p>
-      </div>
-      <div
-        className="page"
-        onClick={() => {
           pageHandler("curso", false);
         }}
       >
         <p>Curso</p>
+      </div>
+      <div
+        className="page"
+        onClick={() => {
+          pageHandler("disciplina", false);
+        }}
+      >
+        <p>Disciplina</p>
       </div>
     </div>
   );
