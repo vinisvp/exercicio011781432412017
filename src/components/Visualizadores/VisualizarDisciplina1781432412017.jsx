@@ -22,7 +22,7 @@ function VisualizarDisciplina1781432412017(getData, setPage) {
 
   return (
     <div className='visualizar-container'>
-      <h1>Cursos Cadastrados</h1>
+      <h1>Disciplinas Cadastradas</h1>
       <div style={style.grid}>
         <div className='grid-cell-header'>Sigla</div>
         <div className='grid-cell-header'>Nome</div>
