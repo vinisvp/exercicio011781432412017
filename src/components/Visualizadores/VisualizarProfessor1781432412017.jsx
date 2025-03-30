@@ -1,18 +1,32 @@
 import { useState } from 'react'
 import './Visualizar.css'
 
-function VisualizarProfessor1781432412017(setPage) {
+function VisualizarProfessor1781432412017(getData, setPage) {
+
+  const renderRow = () =>{
+    let data = getData("professores");
+    let grid = [];
+    data.forEach(teacher => {
+      grid.push(renderField(teacher.id));
+      grid.push(renderField(teacher.name));
+      grid.push(renderField(teacher.email));
+    });
+    console.log(data)
+    return grid;
+  }
+
+  const renderField = (data) => {
+    return <div className='teacher-field'>{data}</div>;
+  }
 
   return (
     <div className='visualizar-container'>
       <h1>Professores Cadastrados</h1>
-      <div className='visualizar-grid'>
-        <div className='teacher-field-header'>Indentificação</div>
+      <div style={style.grid}>
+        <div className='teacher-field-header'>Id</div>
         <div className='teacher-field-header'>Nome</div>
         <div className='teacher-field-header'>E-Mail</div>
-        <div className='teacher-field'>Informação</div>
-        <div className='teacher-field'>Informação</div>
-        <div className='teacher-field'>Informação</div>
+        {renderRow()}
       </div>
       <button type='button' className='cadastro-button postive' onClick={() => { setPage('professor', true) }}>Cadastrar Novo</button><br/>
     </div>
@@ -20,3 +34,10 @@ function VisualizarProfessor1781432412017(setPage) {
 }
 
 export default VisualizarProfessor1781432412017;
+
+const style = {
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: '0.5fr 1.5fr 1fr'
+  }
+}

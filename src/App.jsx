@@ -12,15 +12,21 @@ function App() {
     console.log("Page:", name, " ", cadastrar)
   }
 
-  let data = new Map([
+  const [data, setData] = useState(new Map([
     ['professores', new Array()],
     ['disciplinas', new Array()],
     ['cursos', new Array()],
-  ]);
+  ]));
 
   const save = (type, newData) =>{
-    data.get(type)?.push(newData);
+    let tempData = data;
+    tempData.get(type)?.push(newData);
+    setData(tempData);
     console.log(data.get(type))
+  }
+
+  const getData = (type) =>{
+    return data.get(type);
   }
 
   return (
@@ -29,7 +35,7 @@ function App() {
         <Menu1781432412017 pageHandler={changePage} />
       </Container1781432412017>
       <Container1781432412017>
-        <PageRender1781432412017 page={current[0]} cadastrar={current[1]} pageHandler={changePage} saveHandler={save}/>
+        <PageRender1781432412017 page={current[0]} cadastrar={current[1]} pageHandler={changePage} saveHandler={save} getHandler={getData}/>
       </Container1781432412017>
     </Container1781432412017>
   )

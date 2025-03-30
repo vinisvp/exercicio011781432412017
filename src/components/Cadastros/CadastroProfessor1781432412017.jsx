@@ -10,6 +10,7 @@ function CadastroProfessor1781432412017(save, setPage) {
     }
     clearForm();
     save('professores', teacher);
+    setPage('professor', false);
   }
 
   const clearForm = () =>{
