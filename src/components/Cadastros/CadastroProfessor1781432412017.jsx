@@ -20,7 +20,7 @@ function CadastroProfessor1781432412017(save, setPage) {
 
   return (
     <form className='cadastro-container'>
-      <h1>Cadastrar um professor</h1>
+      <h1>Cadastrar um Professor</h1>
       <div className='input-field'>
         <label>Indentificação</label><br/>
         <input type='number' id='id'/>

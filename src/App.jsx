@@ -5,7 +5,7 @@ import PageRender1781432412017 from './components/PageRender1781432412017';
 import { useState } from 'react';
 
 function App() {  
-  const [current, setCurrent] = useState(["professor", true]);
+  const [current, setCurrent] = useState(["professor", false]);
 
   const changePage = (name, cadastrar) => {
     setCurrent([name, cadastrar]);
