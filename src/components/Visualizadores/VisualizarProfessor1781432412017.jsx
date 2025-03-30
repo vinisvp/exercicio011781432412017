@@ -16,16 +16,16 @@ function VisualizarProfessor1781432412017(getData, setPage) {
   }
 
   const renderField = (data) => {
-    return <div className='teacher-field'>{data}</div>;
+    return <div className='grid-cell'>{data}</div>;
   }
 
   return (
     <div className='visualizar-container'>
       <h1>Professores Cadastrados</h1>
       <div style={style.grid}>
-        <div className='teacher-field-header'>Id</div>
-        <div className='teacher-field-header'>Nome</div>
-        <div className='teacher-field-header'>E-Mail</div>
+        <div className='grid-cell-header'>Id</div>
+        <div className='grid-cell-header'>Nome</div>
+        <div className='grid-cell-header'>E-Mail</div>
         {renderRow()}
       </div>
       <button type='button' className='cadastro-button postive' onClick={() => { setPage('professor', true) }}>Cadastrar Novo</button><br/>

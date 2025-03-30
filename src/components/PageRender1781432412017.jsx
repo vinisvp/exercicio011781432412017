@@ -21,7 +21,7 @@ function PageRender1781432412017({page, cadastrar, saveHandler, getHandler, page
 
   const showPage = () => {
     let current;
-    cadastrar ? current = pagesCadastro.get(page)(saveHandler, pageHandler) : current = pagesVisualizar.get(page)(getHandler, pageHandler);
+    cadastrar ? current = pagesCadastro.get(page)(saveHandler, getHandler, pageHandler) : current = pagesVisualizar.get(page)(getHandler, pageHandler);
     return current;
   };
 

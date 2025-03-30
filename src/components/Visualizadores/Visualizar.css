@@ -12,18 +12,12 @@
 }
 
 /* Grid */
-
-.visualizar-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.teacher-field{
+.grid-cell{
   border: 2px solid rgb(143, 143, 143);
   padding: 10px;
 }
 
-.teacher-field-header{
+.grid-cell-header{
   border: 2px solid rgb(61, 61, 61);
   padding: 10px;
   font-weight: bold;

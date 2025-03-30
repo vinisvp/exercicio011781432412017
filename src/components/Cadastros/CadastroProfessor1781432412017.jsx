@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Cadastro.css'
 
-function CadastroProfessor1781432412017(save, setPage) {
+function CadastroProfessor1781432412017(save, getData, setPage) {
   const saveTeacher = () =>{
     let teacher = {
       id: parseInt(document.getElementById('id').value),
